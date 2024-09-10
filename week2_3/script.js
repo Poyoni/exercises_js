@@ -1,8 +1,7 @@
-// const input = document.getElementById("text");
 
 document.addEventListener('DOMContentLoaded', function() {
-    const addButton = document.querySelector('button');
     const taskInput = document.querySelector('input');
+    const addButton = document.querySelector('button');
     const taskTable = document.querySelector('table');
     const headerRow = document.querySelector('thead tr');
 
@@ -26,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const fullId = Date.now().toString();
             const shortId = fullId.slice(-3) + '...';
 
-            idCell.innerText = shortId; // שימוש ב-ID ייחודי מבוסס זמן
+            idCell.innerText = shortId; 
             taskCell.innerText = taskInput.value;
             statusCell.innerText = 'pending';
-            actionsCell.className = 'actions';
+            //actionsCell.className = 'actions';
 
             const changeStatusButton = document.createElement('button');
             changeStatusButton.innerText = 'Change status';
@@ -56,16 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
             deleteButton.innerText = 'Delete';
             deleteButton.addEventListener('click', function() {
                 taskTable.deleteRow(newRow.rowIndex);
-                updateHeaderVisibility();
+                updateHeaderVisibility(); 
             });
-
+            
             actionsCell.appendChild(changeStatusButton);
             actionsCell.appendChild(editButton);
             actionsCell.appendChild(deleteButton);
-
-            taskInput.value = ''; // ניקוי השדה לאחר הוספת המשימה
+            
+            taskInput.value = '';
         }
+        updateHeaderVisibility();
     });
-    updateHeaderVisibility(); // בדיקה ראשונית של מצב הכותרת
+    updateHeaderVisibility(); 
 });
 

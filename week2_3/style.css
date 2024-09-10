@@ -9,7 +9,7 @@
     height: 100vh;
     min-height: 100vh;
     width: 100%;
-    background-color: #faf9f9;
+    background-color: rgb(240, 240, 246);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
    border-radius: 7px;
 }
 
-input {
+input { 
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 600;
@@ -52,9 +52,9 @@ th {
     background-color: #f2f2f2;
 }
 
-/* tr:nth-child(even) {
-    background-color: #f9f9f9;
-} */
+tr:nth-child(even) {
+    background-color: #ecebeb;
+}
 
 tr:hover {
     background-color: #ddd;
